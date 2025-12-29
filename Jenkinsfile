@@ -18,8 +18,8 @@ pipeline{
           expression{
             flag==false
           }
-        echo 'this is test stage'
       }
+         echo 'this is test stage'
     }
     stage('Deploy'){
       steps{
@@ -27,6 +27,8 @@ pipeline{
       }
     }
   }
+  
+}
   post{
     always{
       echo 'it will run always'
@@ -35,6 +37,5 @@ pipeline{
       echo 'it will run if build fails'
     }
   }
-}
 }
     
