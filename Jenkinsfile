@@ -13,13 +13,13 @@ pipeline{
       }
     }
     stage('Test'){
-      steps{
-        when{
+      when{
           expression{
             flag==false
           }
       }
-         echo 'this is test stage'
+      steps{
+      echo 'this is test stage'
     }
     }
     stage('Deploy'){
